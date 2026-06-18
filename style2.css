@@ -1,0 +1,22 @@
+header{
+    text-align: center;
+}
+body {
+    background-color: cadetblue;
+}
+.Reg-box{
+     width: 400px;
+        background: #f5f3f5;
+        padding: 25px;
+        margin:60px auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgb(66, 63, 63);
+}
+
+    input, select, textarea{
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }

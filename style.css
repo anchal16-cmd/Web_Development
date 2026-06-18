@@ -1,0 +1,124 @@
+  #navbar{
+    padding:5px;
+    height:40px;
+    width:1500px;
+    background-color:rgba(199, 16, 16, 0.686);
+    padding-top:16px;
+} 
+#logo{
+    color:rgb(12, 1, 2);
+    font-size:20px;
+    text-transform: capitalize; 
+    }
+button{
+    color:rgb(12, 1, 2);
+    font-size:15px;
+}
+a{
+    margin-right:200px;
+    font-size:20px;
+}
+body{
+    background-image:url("http://wallpapercave.com/wp/6KYL7wj.jpg");
+}
+
+h2{
+    font-size:30px;
+    color: ghostwhite;
+} 
+#box-container{
+    white-space: nowrap;
+}
+
+.box{
+    width:160px;
+    height:170px;
+    border:2px solid black;
+    display:inline-block;
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    background-repeat:no-repeat;
+    background-position: center top;
+}
+#box1{ background-image:url("https://dogbreeds.wiki/uploads/l/labrador-retriever-photo-7.jpg"); 
+       background-size:cover;
+}
+#box2{ background-image:url("https://highlandcanine.com/wp-content/uploads/2020/12/iStock-926735822.jpg"); 
+      background-size:cover;
+}
+#box3{ background-image:url("https://images.ctfassets.net/m5ehn3s5t7ec/wp-image-198347/1bc2e8bf91e0ce758d39774f1b4ba618/Pug-Dog-Breed-Information.jpg");
+     background-size:cover;
+}
+#box4{ background-image:url("https://dogbreedo.com/wp-content/uploads/2022/10/cropped-Golden-Retrievers-are-Best-Dogs-Ever-story-poster-scaled-1.jpg"); 
+      background-size:cover;
+}
+#box5{ background-image:url("https://www.eatsleepwalk.com/wp-content/uploads/English-Bulldog-Puppy-Training-and-Breed-Information-1.jpg");
+       background-size:cover;
+}
+#box6{ background-image:url("https://talktodogs.com/wp-content/uploads/2020/12/Beagle-Puppy-Tri-Color.jpg");
+     background-size:cover;
+}
+#box7{ background-image:url("https://thehappypuppysite.com/wp-content/uploads/2018/05/doberman-pinscher.jpg");
+    background-size:cover;
+}
+#box8{ background-image:url("https://highlandcanine.com/wp-content/uploads/2021/03/pomeranian-running-and-happy.jpg"); 
+    background-size:cover;
+}
+#box9{ background-image:url("https://blog.mystart.com/wp-content/uploads/My_Rotweiller_00.jpeg");
+    background-size:cover;
+}
+#box11{ background-image:url("https://www.bubblypet.com/wp-content/uploads/2022/07/White-Persian-cat-with-yellow-eyes-and-tongue-stuck-out.jpg"); 
+       background-size:cover;
+}
+#box12{ background-image:url("https://whatzviral.com/wp-content/uploads/2018/12/17-3.jpg"); 
+      background-size:cover;
+}
+#box13{ background-image:url("https://www.dailypaws.com/thmb/t_l3lBOdlK7SJG8hUsHa6wdAyy4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/balinese-sitting-in-a-tree-718322914-2000-1a81750ec04d4b5886327fbbd5c42ca3.jpg");
+     background-size:cover;
+}
+#box14{ background-image:url("https://www.thesprucepets.com/thmb/rO4memNk7zkYKWlQhPQwykLfYmg=/1500x0/filters:no_upscale():strip_icc()/GettyImages-140000553-5bd2454846e0fb0051a52178.jpg"); 
+      background-size:cover;
+}
+#box15{ background-image:url("https://tse4.mm.bing.net/th/id/OIP.-l5Dzkji3iayG9mO8fy9AgHaFV?pid=Api&P=0&h=180");
+       background-size:cover;
+}
+#box16{ background-image:url("https://www.hepper.com/wp-content/uploads/2021/07/Ragdoll-cat_madeinitaly4k_Shutterstock.jpg");
+     background-size:cover;
+}
+#box17{ background-image:url("https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/1590518579129-RN0JSEV89CHR31JG3M0V/sphynx.jpg");
+    background-size:cover;
+}
+#box18{ background-image:url("https://www.animalfunfacts.net/images/stories/pets/cats/abyssinian_cat_exotic_l.jpg"); 
+    background-size:cover;
+}
+#box19{ background-image:url("https://tse1.mm.bing.net/th/id/OIP.JKDCphRNoewCr0ZdCvUnUQHaEr?pid=Api&P=0&h=180");
+    background-size:cover;
+}
+#box21{ background-image:url("https://tse1.mm.bing.net/th/id/OIP.eIBvO7MOTCyB6a1ElVJUtgHaFj?pid=Api&P=0&h=180"); 
+       background-size:cover;
+}
+#box22{ background-image:url("https://tse4.mm.bing.net/th/id/OIP.HsKHZJ3g6_PtmGY0X_sKjQHaE7?pid=Api&P=0&h=180"); 
+      background-size:cover;
+}
+#box23{ background-image:url("https://whyrabbits.com/wp-content/uploads/2023/04/Flemish-Giant-Rabbit-1024x683.png");
+     background-size:cover;
+}
+#box24{ background-image:url("https://media.istockphoto.com/id/500526129/photo/lionhead-rabbit.jpg?s=612x612&w=0&k=20&c=4wOuhB1jgLvFcZaLHtMVTIVpQjsGVqfndgdUiEwvj68="); 
+      background-size:cover;
+}
+#box25{ background-image:url("https://www.hepper.com/wp-content/uploads/2023/05/Rex-Rabbit.jpg");
+       background-size:cover;
+}
+#box26{ background-image:url("https://i.etsystatic.com/33123947/r/il/8c00dd/5004743267/il_fullxfull.5004743267_9n6r.jpg");
+     background-size:cover;
+}
+#box27{ background-image:url("https://i.pinimg.com/originals/e4/76/1b/e4761b6c518e5b8731787bff765229d6.jpg");
+    background-size:cover;
+}
+#box28{ background-image:url("https://thumbs.dreamstime.com/b/female-rabbit-californian-breed-its-brood-female-young-rabbits-californian-breed-247995887.jpg"); 
+    background-size:cover;
+}
+#box29{ background-image:url("https://alchetron.com/cdn/dutch-rabbit-d60a9af4-3a80-441d-87d7-c07af4ae103-resize-750.jpg");
+    background-size:cover;
+}
