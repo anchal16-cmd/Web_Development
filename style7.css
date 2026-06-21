@@ -1,0 +1,23 @@
+.buttons{
+    margin-top: 40px;
+}
+
+.find-btn,
+.explore-btn{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.find-btn{
+    background-color: #001a70;
+    color: white;
+}
+
+.explore-btn{
+    background-color: #ff9100;
+    color: white;
+}
