@@ -1,0 +1,206 @@
+/* 
+   ===========================================
+   FILE: 10-advanced-css.css
+   TOPIC: Advanced CSS Notes
+   Covers: Flexbox, Grid, Positioning, Transitions, Pseudo-classes
+   ===========================================
+*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ===========================================
+   1. FLEXBOX
+   ===========================================
+   - Flexbox ek LAYOUT system hai - elements ko EK LINE me (row ya column)
+     easily arrange karne ke liye
+   - Parent element par "display: flex" lagate hain
+   - Uske andar ke saare direct children automatically "flex items" ban jate hain
+
+   IMPORTANT FLEXBOX PROPERTIES (parent par lagti hain):
+   
+   display: flex          -> Flexbox ON karta hai
+   flex-direction          -> row (left-right, default) ya column (top-bottom)
+   justify-content         -> items ko HORIZONTALLY align karta hai
+                              (flex-start, center, flex-end, space-between, space-around)
+   align-items              -> items ko VERTICALLY align karta hai
+                              (flex-start, center, flex-end, stretch)
+   gap                      -> items ke beech ka space
+*/
+
+.flex-container {
+    display: flex;              /* Flexbox enable kiya */
+    flex-direction: row;        /* items ek row me left to right jayenge */
+    justify-content: space-between; /* items ke beech equal gap, edges pe bhi */
+    align-items: center;        /* items vertically center me align honge */
+    gap: 10px;                  /* har item ke beech 10px ka gap */
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* ===========================================
+   2. GRID
+   ===========================================
+   - CSS Grid ek 2D layout system hai - ROWS aur COLUMNS dono control kar sakte ho
+   - Flexbox usually ek line (1D) ke liye behtar hai, Grid pure layout (2D) ke liye
+   - Parent par "display: grid" lagate hain
+
+   IMPORTANT GRID PROPERTIES:
+
+   display: grid                -> Grid ON karta hai
+   grid-template-columns         -> kitne columns honge aur unka size
+                                    (1fr 1fr 1fr = 3 equal columns, "fr" matlab fraction)
+   grid-template-rows            -> kitne rows honge aur unka size
+   gap                           -> grid items ke beech ka space (row aur column dono)
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal-width columns ban gaye */
+    grid-template-rows: auto auto;      /* rows apne content ke hisab se size lenge */
+    gap: 10px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ===========================================
+   3. POSITIONING
+   ===========================================
+   - "position" property batati hai element page me KAHA aur KAISE rakha jayega
+
+   position: static    -> DEFAULT value. Element normal flow me rehta hai
+                           (jaisa HTML me likha hai, usi order me dikhega)
+   
+   position: relative   -> Element apni NORMAL position se thoda shift hota hai
+                           (top/left/right/bottom properties se control karte hain)
+                           - Important: ye "relative" wala element future me
+                             child elements ke liye reference point ban jata hai
+   
+   position: absolute   -> Element apne NEAREST "relative/absolute" parent ke
+                           corner se position hota hai
+                           - Agar koi parent relative nahi hai, to ye PURE PAGE
+                             (body) ke corner se position hoga
+                           - Ye element normal flow se HATKE rakha jata hai
+                             (jaise woh page ke upar "float" kar raha ho)
+*/
+
+.position-container {
+    position: relative;   /* Ye container absolute child ke liye reference banega */
+    height: 150px;
+    background-color: lightyellow;
+    border: 1px dashed gray;
+    margin-bottom: 20px;
+}
+
+.box-static {
+    position: static;     /* Normal flow - jaisa likha hai wahi dikhega */
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.box-relative {
+    position: relative;
+    top: 10px;             /* normal position se 10px neeche shift hua */
+    left: 20px;            /* normal position se 20px right shift hua */
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.box-absolute {
+    position: absolute;   /* parent (.position-container) ke corner se position hoga */
+    top: 0;
+    right: 0;              /* parent ke top-right corner me chala gaya */
+    background-color: lightblue;
+    padding: 10px;
+}
+
+
+/* ===========================================
+   4. TRANSITIONS
+   ===========================================
+   - Transition se hum CHANGE ko SMOOTH/ANIMATED bana sakte hain
+   - Bina transition ke, hover par change ekdum SUDDEN (jhatke se) hota hai
+   - Transition se wahi change DHEERE DHEERE (smoothly) hota hai
+
+   transition: property duration timing-function;
+   
+   property         -> kaunsi property animate hogi (background-color, all, etc.)
+   duration         -> kitne time me change hoga (jaise 0.3s = 0.3 second)
+   timing-function  -> speed ka pattern (ease, linear, ease-in, ease-out)
+*/
+
+.transition-btn {
+    background-color: tomato;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    /* Upar wali line ka matlab: background-color aur transform dono
+       0.4 second me smoothly change honge, "ease" speed pattern ke saath */
+}
+
+.transition-btn:hover {
+    background-color: darkred;
+    transform: scale(1.1);   /* button thoda bada ho jayega hover par */
+}
+
+
+/* ===========================================
+   5. PSEUDO-CLASSES
+   ===========================================
+   - Pseudo-class ek SPECIAL STATE ko target karta hai
+   - Colon (:) se likha jata hai selector ke baad: selector:pseudo-class
+   - Element khud nahi badalta, par uska STATE (hover, focus, etc.) change hota hai
+
+   :hover       -> Jab mouse element ke UPAR hota hai (sirf tab tak)
+   :focus       -> Jab input field CLICK/SELECT hoti hai (jaise typing ke liye ready)
+   :first-child -> Parent ka SABSE PEHLA child element
+   :last-child  -> Parent ka SABSE AAKHRI child element
+   :nth-child() -> Specific number wala child (jaise 2nd, 3rd)
+*/
+
+.pseudo-link:hover {
+    color: orange;             /* hover karne par color change hoga */
+    text-decoration: underline;
+}
+
+.pseudo-input:focus {
+    border: 2px solid blue;    /* click/focus karne par border blue ho jayega */
+    outline: none;             /* browser ka default blue outline hata diya */
+}
+
+.pseudo-list li:first-child {
+    color: green;               /* sirf PEHLE list item ka color green */
+    font-weight: bold;
+}
+
+.pseudo-list li:last-child {
+    color: red;                 /* sirf AAKHRI list item ka color red */
+    font-weight: bold;
+}
+
+.pseudo-list li:nth-child(2) {
+    color: blue;                 /* sirf 2nd list item ka color blue */
+    font-style: italic;
+}

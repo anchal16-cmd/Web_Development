@@ -1,0 +1,338 @@
+/* 
+   ===========================================
+   FILE: 17-css-deep-dive.css
+   TOPIC: Background, Colors, Units, Display, Float, Box-shadow, Text-shadow
+   ===========================================
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 35px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+
+/* ===========================================
+   1. BACKGROUND PROPERTIES
+   ===========================================
+   background-color  -> solid color background
+   background-image  -> image ko background banana
+   background-repeat  -> image repeat hogi ya nahi
+                          (repeat = default, no-repeat, repeat-x, repeat-y)
+   background-size    -> image ka size
+                          (cover = poora box bhar dega, contain = pura image fit hoga)
+   background-position -> image kaha se start hogi (center, top, left, etc.)
+   
+   SHORTHAND: background: color image repeat position / size;
+   (ek line me sab likh sakte ho, order matter karta hai)
+*/
+
+.bg-color-box {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.bg-image-box {
+    background-image: url('https://via.placeholder.com/400x150');
+    background-repeat: no-repeat;   /* image baar baar repeat nahi hogi */
+    background-size: cover;          /* image poora box cover kar legi */
+    background-position: center;     /* image center se dikhegi */
+    color: white;
+    padding: 40px 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px black;  /* text padhne layak banane ke liye */
+}
+
+/* 
+   GRADIENT BACKGROUND:
+   - linear-gradient se ek color se doosre color me smooth transition milta hai
+   - direction bata sakte ho: to right, to left, to bottom, 45deg, etc.
+*/
+.bg-gradient-box {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* 
+   SHORTHAND EXAMPLE:
+   - Multiple background properties ek line me likhna
+*/
+.bg-multi-box {
+    background: #2c3e50 url('https://via.placeholder.com/50') no-repeat right center;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* ===========================================
+   2. COLORS - HEX, RGB, RGBA, HSL
+   ===========================================
+   
+   HEX:  #RRGGBB format (Red-Green-Blue, 0-9 aur A-F me)
+         Example: #ff5733 -> ye orange-red jaisa color hai
+   
+   RGB:  rgb(red, green, blue) - har value 0 se 255 ke beech
+         Example: rgb(52, 152, 219) -> ye blue color hai
+   
+   RGBA: rgb jaisa hi, par 4th value ADD hoti hai - ALPHA (transparency)
+         Alpha 0 = fully transparent, 1 = fully solid
+         Example: rgba(52, 152, 219, 0.5) -> aadha transparent blue
+   
+   HSL:  hsl(hue, saturation, lightness)
+         hue        -> 0-360 (color wheel par position, jaise 0=red, 120=green, 240=blue)
+         saturation -> 0%-100% (color kitna shudh/grey hai)
+         lightness  -> 0%-100% (kitna light/dark hai)
+         Example: hsl(204, 70%, 53%) -> blue jaisa color
+*/
+
+.color-hex {
+    background-color: #ff5733;
+    color: white;
+    padding: 15px;
+    margin-bottom: 8px;
+}
+
+.color-rgb {
+    background-color: rgb(52, 152, 219);
+    color: white;
+    padding: 15px;
+    margin-bottom: 8px;
+}
+
+.color-rgba {
+    background-color: rgba(52, 152, 219, 0.4);  /* 0.4 = 40% opaque, baaki transparent */
+    color: black;
+    padding: 15px;
+    margin-bottom: 8px;
+}
+
+.color-hsl {
+    background-color: hsl(280, 70%, 60%);
+    color: white;
+    padding: 15px;
+    margin-bottom: 8px;
+}
+
+
+/* ===========================================
+   3. UNITS - px, %, em, rem, vh, vw
+   ===========================================
+   
+   px   -> ABSOLUTE unit. Fixed size, screen size se koi relation nahi
+           (1px = 1 pixel, hamesha same size dikhega)
+   
+   %    -> RELATIVE to PARENT element ka size
+           (jaise width: 50% matlab parent ki half width)
+   
+   em   -> RELATIVE to PARENT element ka FONT-SIZE
+           (1em = parent ka font-size jitna. 2em = double)
+   
+   rem  -> RELATIVE to ROOT (html tag) ka FONT-SIZE
+           (em se better hai kyunki nesting me confusion nahi hoti,
+            kyunki ye hamesha ROOT se calculate hota hai, parent se nahi)
+   
+   vh   -> Viewport Height ka % (1vh = screen height ka 1%)
+   vw   -> Viewport Width ka % (1vw = screen width ka 1%)
+           (Responsive design me bahut useful - screen size badlega to ye bhi badlenge)
+*/
+
+.unit-px {
+    width: 300px;        /* hamesha 300 pixels rahega, chahe screen kuch bhi ho */
+    background-color: #f39c12;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.unit-percent {
+    width: 50%;           /* parent element ki 50% width lega */
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.unit-em {
+    font-size: 1.5em;     /* parent font-size se 1.5x bada */
+    margin-bottom: 8px;
+}
+
+.unit-rem {
+    font-size: 1.5rem;    /* html/root font-size se 1.5x bada (usually 16px hota hai root) */
+    margin-bottom: 8px;
+}
+
+.unit-vw {
+    width: 50vw;           /* screen ki width ka 50% - resize karke dekho browser */
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+
+/* ===========================================
+   4. DISPLAY PROPERTY - block, inline, inline-block, none
+   ===========================================
+   
+   display: block         -> Element apni NAYI LINE se start hota hai,
+                              poori available width leta hai
+                              (div, p, h1-h6 by default block hote hain)
+   
+   display: inline         -> Element SIRF JITNI JAGAH CHAHIYE utni leta hai,
+                              naya line NAHI lega, width/height set karne par
+                              koi effect NAHI hota
+                              (span, a, strong by default inline hote hain)
+   
+   display: inline-block  -> Best of both! Line break nahi hoga (inline jaisa)
+                              PAR width/height set kar sakte ho (block jaisa)
+   
+   display: none           -> Element COMPLETELY HIDE ho jata hai
+                              (page me jagah bhi nahi lega, jaise exist hi nahi karta)
+*/
+
+.display-inline {
+    display: inline;
+    background-color: lightyellow;
+    padding: 10px;
+    width: 200px;          /* Ye width APPLY NAHI hogi, kyunki inline hai */
+}
+
+.display-block {
+    display: block;
+    background-color: lightcoral;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.display-inline-block {
+    display: inline-block;
+    background-color: lightgreen;
+    padding: 10px;
+    width: 150px;           /* Ye width APPLY hogi, kyunki inline-block hai */
+    margin-right: 5px;
+}
+
+.display-none {
+    display: none;          /* Ye text page par bilkul invisible hoga */
+}
+
+
+/* ===========================================
+   5. FLOAT PROPERTY
+   ===========================================
+   - float element ko LEFT ya RIGHT taraf "udha" deta hai (normal flow se bahar)
+   - Baaki content (jaise text/paragraph) us floated element ke AAS-PAS
+     WRAP ho jata hai
+   - Pehle layouts banane ke liye float bahut use hota tha,
+     ab Flexbox/Grid better hain layout ke liye - par float abhi bhi
+     images ke text-wrap ke liye useful hai
+   
+   clear: both -> Kisi element ko floats ke EFFECT se bachata hai,
+                  uss element ko float ke NEECHE force karta hai
+*/
+
+.float-container {
+    background-color: #ecf0f1;
+    padding: 10px;
+    overflow: hidden;       /* parent ko floats ke hisab se sahi height dene ke liye */
+}
+
+.float-left-box {
+    float: left;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+}
+
+.float-right-box {
+    float: right;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+}
+
+.float-clear-text {
+    margin: 0;
+}
+
+.clear-both {
+    clear: both;            /* Float ka effect yaha khatam - aage normal flow */
+}
+
+
+/* ===========================================
+   6. BOX-SHADOW
+   ===========================================
+   box-shadow: offset-x offset-y blur-radius spread-radius color;
+   
+   offset-x       -> shadow RIGHT (positive) ya LEFT (negative) kitna jayegi
+   offset-y       -> shadow DOWN (positive) ya UP (negative) kitna jayegi
+   blur-radius     -> shadow kitni blur/soft dikhegi (0 = sharp edge)
+   spread-radius   -> shadow kitni PHAILEGI (optional, 0 default)
+   color           -> shadow ka color
+   
+   inset keyword   -> shadow ko BAHAR ki jagah ANDAR ki taraf daal deta hai
+*/
+
+.shadow-basic {
+    box-shadow: 4px 4px 10px gray;   /* right-down shadow, thoda blur */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.shadow-spread {
+    box-shadow: 0px 0px 15px 5px rgba(52, 152, 219, 0.6);  /* sab taraf glow jaisa */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.shadow-inset {
+    box-shadow: inset 0px 0px 15px gray;  /* shadow box ke ANDAR dikhegi */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* ===========================================
+   7. TEXT-SHADOW
+   ===========================================
+   text-shadow: offset-x offset-y blur-radius color;
+   - box-shadow jaisa hi syntax hai, par ye TEXT par lagta hai, box par nahi
+   - spread-radius text-shadow me NAHI hota (sirf box-shadow me hota hai)
+*/
+
+.text-shadow-basic {
+    font-size: 24px;
+    text-shadow: 2px 2px 3px gray;
+}
+
+.text-shadow-glow {
+    font-size: 24px;
+    color: white;
+    background-color: #2c3e50;
+    padding: 10px;
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #00ffff;  /* glow effect - multiple shadows */
+}
+
+.text-shadow-3d {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 0 #bdc3c7,
+                 2px 2px 0 #95a5a6,
+                 3px 3px 0 #7f8c8d;   /* layered shadows se 3D depth jaisa effect */
+}

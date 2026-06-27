@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Basic CSS (External CSS file use karke)
+  File: 09-basic-css.html
+  
+  IMPORTANT: Is file ko CSS file ke SAME FOLDER me rakho
+  (09-basic-css.css bhi isi folder me honi chahiye, tabhi link kaam karega)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic CSS Notes</title>
+
+    <!-- 
+        ===========================================
+        EXTERNAL CSS KAISE LINK KARTE HAIN
+        ===========================================
+        - <link> tag se hum bahar ki .css file ko jodte hain
+        - rel="stylesheet"  -> browser ko batata hai ye file ek stylesheet hai
+        - href=""           -> CSS file ka path/naam (yaha same folder me hai isiliye sirf naam)
+        - Ye tag hamesha <head> ke andar likhte hain
+        - FAYDA: ek CSS file ko MULTIPLE HTML pages me use kar sakte ho
+          (internal CSS me har page me alag se likhna padta, yaha ek hi jagah maintain hota hai)
+    -->
+    <link rel="stylesheet" href="09-basic-css.css">
+
+</head>
+<body>
+
+    <!-- 
+        Niche jo bhi elements hain, unki styling "09-basic-css.css" file me hai
+        Notes wahi file ke andar comments ke through diye gaye hain
+    -->
+
+    <h1 id="mainHeading">Basic CSS - External File Example</h1>
+
+    <p>Ye ek normal paragraph hai.</p>
+
+    <p class="highlight">Ye paragraph "highlight" class ke saath hai.</p>
+
+    <div class="box">
+        Ye ek div hai "box" class ke saath - border, padding, margin dekho.
+    </div>
+
+    <ul>
+        <li>List item ek</li>
+        <li>List item do</li>
+        <li>List item teen</li>
+    </ul>
+
+    <a href="#" class="my-link">Ye ek styled link hai</a>
+
+</body>
+</html>

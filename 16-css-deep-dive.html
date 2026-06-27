@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: CSS Deep Dive - Background, Colors, Units, Display, Float, Shadows
+  File: 17-css-deep-dive.html
+  
+  IMPORTANT: Is file ko CSS file ke SAME FOLDER me rakho
+  (17-css-deep-dive.css bhi isi folder me honi chahiye, tabhi link kaam karega)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Deep Dive Notes</title>
+    <link rel="stylesheet" href="17-css-deep-dive.css">
+</head>
+<body>
+
+    <h1>CSS Deep Dive - Saare Important Topics</h1>
+
+    <!-- ============ BACKGROUND SECTION ============ -->
+    <h2>1. Background Properties</h2>
+    <div class="bg-color-box">Background Color</div>
+    <div class="bg-image-box">Background Image (with no-repeat + cover)</div>
+    <div class="bg-gradient-box">Background Gradient</div>
+    <div class="bg-multi-box">Background ke multiple properties ek saath (shorthand)</div>
+
+    <!-- ============ COLORS SECTION ============ -->
+    <h2>2. Colors - RGB, HEX, HSL, RGBA</h2>
+    <div class="color-hex">HEX Color (#ff5733)</div>
+    <div class="color-rgb">RGB Color (rgb(52, 152, 219))</div>
+    <div class="color-rgba">RGBA Color (with transparency)</div>
+    <div class="color-hsl">HSL Color (hue, saturation, lightness)</div>
+
+    <!-- ============ UNITS SECTION ============ -->
+    <h2>3. Units - px, %, em, rem, vh, vw</h2>
+    <div class="unit-px">Width in PX (fixed 300px)</div>
+    <div class="unit-percent">Width in % (50% of parent)</div>
+    <p class="unit-em">Font-size in EM (parent ke relative)</p>
+    <p class="unit-rem">Font-size in REM (root/html ke relative)</p>
+    <div class="unit-vw">Width in VW (50% of viewport width)</div>
+
+    <!-- ============ DISPLAY SECTION ============ -->
+    <h2>4. Display Property - block, inline, inline-block, none</h2>
+    <span class="display-inline">Inline 1</span>
+    <span class="display-inline">Inline 2 (same line par)</span>
+    <br>
+    <div class="display-block">Block 1 (apni line lega)</div>
+    <div class="display-block">Block 2 (neeche aayega)</div>
+    <span class="display-inline-block">Inline-Block 1</span>
+    <span class="display-inline-block">Inline-Block 2 (same line, par width/height kaam karega)</span>
+    <p>Ye paragraph dikh raha hai. <span class="display-none">Ye span display:none hai - isiliye INVISIBLE hai, dhoondh ke dekho!</span> Aage ka text.</p>
+
+    <!-- ============ FLOAT SECTION ============ -->
+    <h2>5. Float Property</h2>
+    <div class="float-container">
+        <div class="float-left-box">Float Left</div>
+        <div class="float-right-box">Float Right</div>
+        <p class="float-clear-text">Ye text float boxes ke aas paas wrap ho raha hai jab tak clear nahi lagaya.</p>
+    </div>
+    <div class="clear-both"></div>
+
+    <!-- ============ BOX-SHADOW SECTION ============ -->
+    <h2>6. Box-Shadow</h2>
+    <div class="shadow-basic">Basic Shadow</div>
+    <div class="shadow-spread">Spread Shadow</div>
+    <div class="shadow-inset">Inset Shadow (andar ki taraf)</div>
+
+    <!-- ============ TEXT-SHADOW SECTION ============ -->
+    <h2>7. Text-Shadow</h2>
+    <p class="text-shadow-basic">Ye basic text shadow hai</p>
+    <p class="text-shadow-glow">Ye glow effect wala text shadow hai</p>
+    <p class="text-shadow-3d">Ye 3D jaisa text shadow hai</p>
+
+</body>
+</html>

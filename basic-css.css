@@ -1,0 +1,114 @@
+/* 
+   ===========================================
+   FILE: 09-basic-css.css
+   TOPIC: Basic CSS Notes (External Stylesheet)
+   ===========================================
+   - Ye file ek ALAG .css file hai, HTML se "link" tag ke through judi hai
+   - CSS files me comments is tarah likhte hain: /* comment yaha */ /* 
+   - HTML jaisa <!-- --> CSS me NAHI chalega, yaad rakhna
+*/
+
+
+/* 
+   ===========================================
+   TAG SELECTOR
+   ===========================================
+   - Seedha tag ka naam likhne se WO SAARE tags select ho jate hain
+   - Yaha jitne bhi <p> tags HTML me hain, sab par ye style lagega
+*/
+p {
+    color: blue;
+    font-size: 18px;
+}
+
+
+/* 
+   ===========================================
+   ID SELECTOR (# se start hota hai)
+   ===========================================
+   - HTML me id="mainHeading" diya hai, yaha #mainHeading se select kiya
+   - ID hamesha UNIQUE hoti hai - ek page me ek id sirf ek hi jagah use karo
+*/
+#mainHeading {
+    color: darkgreen;
+    text-align: center;
+}
+
+
+/* 
+   ===========================================
+   CLASS SELECTOR (. se start hota hai)
+   ===========================================
+   - HTML me class="highlight" diya hai, yaha .highlight se select kiya
+   - Class REUSABLE hoti hai - jitne elements ko same style chahiye sabko de do
+*/
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
+/* 
+   ===========================================
+   BOX MODEL PROPERTIES
+   ===========================================
+   width / height   -> Element ka size
+   border            -> Element ke around line
+   padding           -> CONTENT aur BORDER ke beech ki space (andar wali spacing)
+   margin            -> BORDER ke BAHAR, doosre elements se gap (bahar wali spacing)
+
+   Yaad rakhne ka tarika:
+   Padding = Andar wali jagah
+   Margin  = Bahar wali jagah
+*/
+.box {
+    width: 200px;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: lightcyan;
+}
+
+
+/* 
+   ===========================================
+   LIST STYLING
+   ===========================================
+   - list-style-type se bullet ka type change kar sakte ho
+     values: disc (default dot), circle, square, none (bullet hatane ke liye)
+*/
+ul {
+    list-style-type: square;
+}
+
+li {
+    color: brown;
+    margin-bottom: 5px;
+}
+
+
+/* 
+   ===========================================
+   LINK STYLING
+   ===========================================
+   - text-decoration: none se link ka default underline hata sakte ho
+*/
+.my-link {
+    color: purple;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* 
+   ===========================================
+   FONT PROPERTIES - QUICK RECAP
+   ===========================================
+   font-family  -> konsa font style (Arial, Verdana, etc.)
+   font-size    -> text ka size (px, em, % me)
+   font-weight  -> bold hai ya normal (normal, bold, 100-900)
+   text-align   -> left, center, right, justify
+*/
+body {
+    font-family: Arial, sans-serif;
+}
