@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Links (anchor tag) aur Images
+  File: 03-links-images.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links and Images Notes</title>
+</head>
+<body>
+
+    <h1>Links (a tag) aur Images (img tag)</h1>
+
+    <!-- 
+        ===========================================
+        ANCHOR TAG (<a>) - LINKS
+        ===========================================
+        - <a> tag se hum link bana sakte hain
+        - "href" attribute me wo link/URL daalte hain jaha jaana hai
+        - <a> aur </a> ke beech jo text hoga wahi clickable dikhega
+        - target="_blank" use karne se link NAYE TAB me khulega
+        - Agar target nahi doge to link SAME TAB me khulega (default)
+    -->
+
+    <h2>Basic Link</h2>
+    <a href="https://www.google.com">Google par jao</a>
+
+    <h2>Link jo naye tab me khule</h2>
+    <a href="https://www.google.com" target="_blank">Google (naye tab me khulega)</a>
+
+    <!-- 
+        INTERNAL LINK NOTES:
+        - Same website ke andar kisi doosre page par link dena ho to
+          sirf file ka naam likhte hain, full URL nahi
+        - Example: agar tumhari "about.html" file same folder me hai
+    -->
+
+    <h2>Internal Link (same website ke andar)</h2>
+    <a href="about.html">About page par jao (agar wo file exist karti)</a>
+
+    <!-- 
+        EMAIL LINK NOTES:
+        - mailto: likhne se click karne par user ka email app khul jata hai
+    -->
+
+    <h2>Email Link</h2>
+    <a href="mailto:someone@example.com">Email bhejo</a>
+
+    <hr>
+
+    <!-- 
+        ===========================================
+        IMG TAG - IMAGES
+        ===========================================
+        - <img> ek self-closing tag hai (</img> nahi likhna)
+        - "src" attribute me image ka path/URL daalte hain
+        - "alt" attribute bahut IMPORTANT hai:
+          1) Agar image load na ho to ye text dikhta hai
+          2) Screen readers (blind users ke liye) ye text padhte hain
+          3) Google SEO ke liye bhi alt text helpful hota hai
+        - width aur height se image ka size set kar sakte ho (pixels me)
+    -->
+
+    <h2>Image Example</h2>
+    <img src="https://via.placeholder.com/200x100" alt="Ye ek placeholder image hai" width="200" height="100">
+    <!-- 
+        Note: agar tumhari apni image file ho to:
+        <img src="myphoto.jpg" alt="meri photo"> 
+        - bas dhyan rakho image file usi folder me ho ya correct path do
+    -->
+
+    <hr>
+
+    <!-- 
+        ===========================================
+        BONUS: IMAGE KO LINK BANANA
+        ===========================================
+        - <a> tag ke andar <img> tag daal do
+        - Ab image par click karne se link open hoga
+    -->
+
+    <h2>Clickable Image (image jo link ki tarah kaam kare)</h2>
+    <a href="https://www.google.com" target="_blank">
+        <img src="https://via.placeholder.com/150" alt="Click karne wali image" width="150" height="150">
+    </a>
+
+</body>
+</html>

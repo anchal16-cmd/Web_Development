@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Text Formatting Tags
+  File: 06-text-formatting.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Formatting Notes</title>
+</head>
+<body>
+
+    <h1>Text Formatting Tags</h1>
+
+    <!-- 
+        BOLD TEXT:
+        - <b> aur <strong> dono text ko BOLD dikhate hain dikhne me
+        - Difference: <strong> ka matlab hai "ye text IMPORTANT hai" (semantic meaning)
+                      <b> sirf visually bold karta hai, kuch important nahi batata
+        - Screen readers <strong> ko zyada emphasis ke saath padhte hain
+        - Best practice: jab text important ho to <strong> use karo
+    -->
+
+    <p>Ye <b>bold text</b> hai (sirf visual bold).</p>
+    <p>Ye <strong>important text</strong> hai (semantic - important bhi hai).</p>
+
+    <!-- 
+        ITALIC TEXT:
+        - <i> aur <em> dono text ko ITALIC dikhate hain
+        - Difference: <em> ka matlab "ye text EMPHASIZE karna hai" (semantic)
+                      <i> sirf visually italic karta hai (jaise koi foreign word, ship ka naam)
+    -->
+
+    <p>Ye <i>italic text</i> hai (sirf visual italic - jaise book ka naam).</p>
+    <p>Ye <em>emphasized text</em> hai (semantic - zor dene ke liye).</p>
+
+    <!-- 
+        UNDERLINE:
+        - <u> text ke neeche line laga deta hai
+        - Kam use hota hai kyunki underline links jaisa lagta hai (confusion ho sakta hai)
+    -->
+
+    <p>Ye <u>underline text</u> hai.</p>
+
+    <!-- 
+        STRIKETHROUGH / DELETED TEXT:
+        - <del> text ke beech me line laga deta hai (jaise kuch cancel/delete hua ho)
+        - <s> bhi same dikhता hai par "strikethrough" ke liye hota hai (jaise price change)
+    -->
+
+    <p>Old price: <del>500 rupees</del> New price: 350 rupees</p>
+
+    <!-- 
+        SUBSCRIPT aur SUPERSCRIPT:
+        - <sub> text ko thoda neeche aur chota kar deta hai (jaise chemical formula)
+        - <sup> text ko thoda upar aur chota kar deta hai (jaise power/exponent)
+    -->
+
+    <p>Water formula: H<sub>2</sub>O (2 neeche hai - subscript)</p>
+    <p>5<sup>2</sup> = 25 (2 upar hai - superscript)</p>
+
+    <!-- 
+        MARK TAG:
+        - <mark> text ko highlight kar deta hai (yellow background by default)
+        - Jaise koi important point ko highlight karna ho
+    -->
+
+    <p>Ye <mark>highlighted text</mark> hai - dekho yellow background aaya.</p>
+
+    <!-- 
+        SMALL TAG:
+        - <small> text ko chota kar deta hai
+        - Disclaimer, copyright notice jaise chote text ke liye useful
+    -->
+
+    <p>Normal text <small>aur ye chota wala text hai</small></p>
+
+    <!-- 
+        SPAN TAG:
+        - <span> ek generic inline container hai
+        - Khud se kuch style nahi karta, par CSS lagane ke liye use hota hai
+        - Jab ek line ke beech ka sirf KUCH part style karna ho, tab span use karte hain
+    -->
+
+    <p>Ye normal text hai par <span style="color: red;">ye wala part red color me hai</span> span ki wajah se.</p>
+
+</body>
+</html>

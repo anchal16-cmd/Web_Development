@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Lists in HTML - ul, ol, dl
+  File: 02-lists.html
+  Teen tarah ki lists hoti hain HTML me - ye sab examples ke saath niche hain
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists Notes</title>
+</head>
+<body>
+
+    <h1>HTML Lists - Teen Type</h1>
+
+    <!-- 
+        ===========================================
+        1. UNORDERED LIST (ul) 
+        ===========================================
+        - "ul" matlab Unordered List - jab order/sequence matter nahi karta
+        - Bullets (dots) ke saath items dikhte hain
+        - Har item <li> (list item) tag me likha jata hai
+        - ul ke andar sirf li tags hi direct child ho sakte hain
+    -->
+
+    <h2>1. Unordered List (ul) - Bina number ke, bullets ke saath</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+    <!-- Use case: Jaise shopping list, features list - jaha order important nahi -->
+
+
+    <!-- 
+        ===========================================
+        2. ORDERED LIST (ol)
+        ===========================================
+        - "ol" matlab Ordered List - jab sequence/order important ho
+        - Automatically numbers (1, 2, 3...) lag jate hain
+        - Har item bhi <li> tag me hi likha jata hai (ul jaisa hi)
+        - type attribute se number ka style change kar sakte ho:
+          type="1" (default numbers), type="A" (capital letters),
+          type="a" (small letters), type="I" (roman numbers)
+    -->
+
+    <h2>2. Ordered List (ol) - Numbers ke saath, sequence wali</h2>
+    <ol>
+        <li>Pehle batter banao</li>
+        <li>Fir oven preheat karo</li>
+        <li>Batter ko oven me daalo</li>
+    </ol>
+    <!-- Use case: Recipe steps, instructions - jaha order matter karta hai -->
+
+    <h3>Ordered list with type="A" (capital letters)</h3>
+    <ol type="A">
+        <li>First item - dekho A se start hua</li>
+        <li>Second item - B aayega</li>
+        <li>Third item - C aayega</li>
+    </ol>
+
+
+    <!-- 
+        ===========================================
+        3. DESCRIPTION LIST (dl)
+        ===========================================
+        - "dl" matlab Description List (pehle "Definition List" kehte the)
+        - Ye terms aur unki definitions/description dikhane ke liye hota hai
+        - <dt> = Description Term (jo word define karna hai)
+        - <dd> = Description Detail (uska matlab/explanation)
+        - Ek dt ke multiple dd ho sakte hain
+    -->
+
+    <h2>3. Description List (dl) - Term aur uska matlab</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language - webpage ka structure banane ke liye</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets - webpage ko style/design dene ke liye</dd>
+
+        <dt>JS</dt>
+        <dd>JavaScript - webpage ko interactive/dynamic banane ke liye</dd>
+    </dl>
+    <!-- Use case: Glossary, FAQ pages, term-definition wale content -->
+
+
+    <!-- 
+        ===========================================
+        BONUS: NESTED LIST (list ke andar list)
+        ===========================================
+        - Lists ko ek doosre ke andar bhi daal sakte ho
+        - Bahut common hai jab sub-categories dikhani ho
+    -->
+
+    <h2>Bonus: Nested List (List ke andar List)</h2>
+    <ul>
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Potato</li>
+                <li>Onion</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Headings aur Paragraphs
+  File: 01-headings-paragraphs.html
+  Ye file browser me khol ke dekho - jo code hai wahi result dikhega
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headings and Paragraphs Notes</title>
+</head>
+<body>
+
+    <!-- 
+        HEADINGS NOTES:
+        - HTML me 6 headings hoti hain: h1 se h6
+        - h1 sabse BIG aur IMPORTANT hota hai (jaise page ka main title)
+        - h6 sabse SMALL hota hai
+        - Ek page me usually sirf ek h1 use karo (SEO ke liye best practice)
+        - Heading ka matlab sirf "bada text" nahi hota - ye page ki STRUCTURE batata hai
+          (jaise kisi book me Chapter -> Section -> Sub-section)
+    -->
+
+    <h1>Ye H1 hai - Sabse bada heading</h1>
+    <h2>Ye H2 hai - Thoda chota</h2>
+    <h3>Ye H3 hai</h3>
+    <h4>Ye H4 hai</h4>
+    <h5>Ye H5 hai</h5>
+    <h6>Ye H6 hai - Sabse chota heading</h6>
+
+    <!-- 
+        PARAGRAPH NOTES:
+        - <p> tag paragraph ke liye use hota hai
+        - Browser automatically har <p> ke baad ek line ka gap de deta hai
+        - Agar tum text ke beech me normal Enter dabaoge (HTML code me),
+          browser usko IGNORE kar dega - sirf ek space dikhega
+        - Line break ke liye <br> tag use karte hain (niche example hai)
+    -->
+
+    <p>Ye ek normal paragraph hai. Isme jitna bhi likho,
+    ye sab ek hi line jaisa treat hoga jab tak naya tag na ho.</p>
+
+    <p>Ye doosra paragraph hai - dekho automatically gap aa gaya upar wale se.</p>
+
+    <!-- 
+        <br> TAG NOTES:
+        - <br> ka use line break dene ke liye hota hai
+        - Ye "self-closing" tag hai, matlab </br> likhne ki zaroorat nahi
+        - Jab paragraph ke beech me bhi naya line chahiye ho tab use karo
+    -->
+
+    <p>Ye line ek hai.<br>
+    Aur ye doosri line hai - <br> tag ki wajah se neeche aayi.</p>
+
+    <!-- 
+        <hr> TAG NOTES:
+        - <hr> ek horizontal line (divider) banata hai
+        - Topics ko visually separate karne ke liye useful hai
+        - Ye bhi self-closing tag hai
+    -->
+
+    <hr>
+
+    <p>Upar wali line <hr> tag se bani hai - topics ko separate karne ke liye.</p>
+     <!--<U></u> ka use underline krne ke liye-->
+    <!--<i></i> ka use italic me likhne ke liye-->
+    <!--<b></b> ka use bold krne ke liye-->
+    <!--<hr> use seprate content horizantally using line-->
+    <hr>
+    <p>HTML5 APIs browser ki capabilities ko web developers <b>ke liye accessible</b> banati hain.
+    <u>Inka use location</u>,storage, graphics,<i>media aur offline support ke liye hota</i> hai.
+    yeh modern web applications ka important part hain</p>
+    <!--<pre></pre> same changes in paragraph  ham jaise gap lgake likhte hai bilkul vaisa run hota hai lekin
+    <p></p> me gap nhi rah pata gap hat jata hai-->
+
+    <pre>sample graph          sample graph sample graph sample graph sample graph sample graph sample graph sample graph
+    sample graph sample graph sample graph sample graph sample graph sample graph sample graph sample graph sample graph 
+    sample graph sample graph sample graph <big>sample graph</big>sample graph <small>sample graph</small> sample graph 
+    sample graph</pre>
+<hr>
+<!--<sub> ka use koi eise fomula likhne ke liye hota hai jha niche ke side koi digit ke sath
+formula ho like h2o-->
+<!--<sup> ka use any mathematic power formula likhne ke liye hota hai like a^n=b-->
+<p>H<sub>2</sub>0</p>
+<p>3<sup>2</sup> = 9</p>
+
+</body>
+</html>

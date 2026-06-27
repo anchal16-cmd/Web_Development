@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Forms in HTML
+  File: 05-forms.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Notes</title>
+</head>
+<body>
+
+    <h1>HTML Forms</h1>
+
+    <!-- 
+        ===========================================
+        FORM TAG BASICS
+        ===========================================
+        - <form> ke andar saare input elements hote hain
+        - action="" : form submit hone par data kaha jayega (URL/page)
+        - method="" : data kaise bheja jayega
+            -> GET: data URL me dikhta hai (search jaisa), chota data ke liye
+            -> POST: data hidden rehta hai, secure aur bada data ke liye (jaise password)
+    -->
+
+    <h2>Basic Form Structure</h2>
+    <form action="/submit-page" method="POST">
+
+        <!-- 
+            LABEL TAG NOTES:
+            - <label> input field ka naam batata hai
+            - "for" attribute me wahi value do jo input ke "id" me hai
+            - Isse fayda: label par click karne se bhi input select ho jata hai
+              (especially checkbox/radio me bahut useful)
+        -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Apna naam likho">
+        <br><br>
+
+        <!-- 
+            INPUT TYPE="text" : Normal single-line text ke liye
+            placeholder: input ke andar hint text dikhata hai (halka grey color me)
+            name attribute: ye zaroori hai - jab form submit hota hai,
+                            backend ko pata chalta hai ye data kis field ka hai
+        -->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <!-- type="email" automatically check karega ki @ aur . hai ki nahi -->
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <!-- type="password" likhe hue text ko dots (....) me chhupa deta hai -->
+        <br><br>
+
+        <!-- 
+            RADIO BUTTON NOTES:
+            - Jab options me se SIRF EK choose karna ho
+            - Saare radio buttons ka "name" SAME hona chahiye
+              (tabhi browser samjhega ye ek hi group ke options hain)
+            - "value" wo data hai jo backend ko bheja jayega
+        -->
+
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- 
+            CHECKBOX NOTES:
+            - Jab MULTIPLE options select karne ho (ek se zyada)
+            - Har checkbox independent hota hai
+        -->
+
+        <p>Hobbies:</p>
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label>
+
+        <input type="checkbox" id="coding" name="hobby" value="coding">
+        <label for="coding">Coding</label>
+        <br><br>
+
+        <!-- 
+            DROPDOWN (select) NOTES:
+            - <select> ek dropdown list banata hai
+            - Har option <option> tag me hota hai
+            - value wo hota hai jo backend ko jayega,
+              text (jo option tag ke beech likha hai) wo user ko dikhta hai
+        -->
+
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="ranchi">Ranchi</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+        <br><br>
+
+        <!-- 
+            TEXTAREA NOTES:
+            - Multi-line text input ke liye (jaise message, comment box)
+            - rows aur cols se size set kar sakte ho
+        -->
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Apna message likho"></textarea>
+        <br><br>
+
+        <!-- 
+            SUBMIT BUTTON NOTES:
+            - type="submit" ka button form ka data submit karta hai
+            - Click karte hi form "action" wale page par data bhej dega
+        -->
+
+        <input type="submit" value="Submit Karo">
+
+    </form>
+
+    <!-- 
+        ===========================================
+        QUICK SUMMARY - Common input types
+        ===========================================
+        type="text"     -> normal text
+        type="email"     -> email validation ke saath
+        type="password" -> text ko hide karta hai
+        type="number"   -> sirf numbers allow karta hai
+        type="date"     -> calendar/date picker dikhata hai
+        type="radio"    -> ek option choose karna
+        type="checkbox" -> multiple options choose karna
+        type="submit"   -> form submit karne ka button
+    -->
+
+</body>
+</html>

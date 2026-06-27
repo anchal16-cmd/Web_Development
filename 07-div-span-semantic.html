@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Div, Span aur Semantic Tags
+  File: 07-div-span-semantic.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div Span Semantic Notes</title>
+    <style>
+        /* Ye styling sirf samajhne ke liye hai ki semantic tags kaise dikhte hain */
+        header, nav, main, section, article, aside, footer {
+            border: 1px dashed gray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Div, Span aur Semantic Tags</h1>
+
+    <!-- 
+        ===========================================
+        DIV TAG
+        ===========================================
+        - <div> ek BLOCK-level generic container hai
+        - "Block-level" matlab: ye apni khud ki nayi line se start hota hai
+          aur poori width le leta hai
+        - Khud se koi meaning/style nahi hota - sirf grouping ke liye use hota hai
+        - CSS/JS lagane ke liye sabse zyada use hota hai
+        - Jaise ek box jisme tum kuch bhi rakh sakte ho (text, images, other divs)
+    -->
+
+    <h2>Div Example</h2>
+    <div style="background-color: lightblue;">
+        <p>Ye sab ek div ke andar hai.</p>
+        <p>Div poori width leta hai aur naye line se start hota hai.</p>
+    </div>
+
+    <!-- 
+        ===========================================
+        SPAN TAG (Recap)
+        ===========================================
+        - <span> ek INLINE generic container hai
+        - "Inline" matlab: ye sirf jitni jagah chahiye utni hi leta hai,
+          naye line se start nahi hota
+        - Div jaisa hi hai bas difference: div BLOCK hai, span INLINE hai
+    -->
+
+    <h2>Span Example</h2>
+    <p>Ye line ke beech me <span style="background-color: yellow;">sirf ye part span hai</span> aur line continue hoti hai.</p>
+
+    <hr>
+
+    <!-- 
+        ===========================================
+        SEMANTIC TAGS - Kyun Important Hain
+        ===========================================
+        - "Semantic" matlab tag ka NAAM hi uska MEANING/PURPOSE batata hai
+        - Pehle log sab kuch <div> se hi banate the (div soup kehte hain isko)
+        - Lekin semantic tags se code:
+          1) Padhne me aasan hota hai (developer ko samajh aata hai kya hai)
+          2) SEO better hota hai (Google ko page structure samajh aata hai)
+          3) Accessibility better hoti hai (screen readers better samajhte hain)
+    -->
+
+    <h2>Common Semantic Tags</h2>
+
+    <!-- 
+        <header> : Page ya section ka top part (logo, title, navigation aata hai yaha)
+    -->
+    <header>
+        <h3>Ye &lt;header&gt; tag hai</h3>
+        <p>Usually website ka top part - logo, site name, navbar yaha hota hai</p>
+    </header>
+
+    <!-- 
+        <nav> : Navigation links rakhne ke liye (menu bar)
+    -->
+    <nav>
+        <h3>Ye &lt;nav&gt; tag hai</h3>
+        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+    </nav>
+
+    <!-- 
+        <main> : Page ka MAIN content jo sabse important hai
+        - Ek page me sirf EK baar <main> use hona chahiye
+    -->
+    <main>
+        <h3>Ye &lt;main&gt; tag hai</h3>
+        <p>Page ka asli/main content yaha aata hai (jo page ka core purpose hai)</p>
+    </main>
+
+    <!-- 
+        <section> : Content ko logical groups me divide karne ke liye
+        - Jaise "About Us section", "Services section"
+    -->
+    <section>
+        <h3>Ye &lt;section&gt; tag hai</h3>
+        <p>Ek topic/group ka content - jaise homepage ka "Services" section</p>
+    </section>
+
+    <!-- 
+        <article> : Independent/standalone content ke liye
+        - Jaise blog post, news article, comment - jo apne aap me complete ho
+    -->
+    <article>
+        <h3>Ye &lt;article&gt; tag hai</h3>
+        <p>Ek complete blog post, news story, ya comment - jo standalone samajh aaye</p>
+    </article>
+
+    <!-- 
+        <aside> : Main content se related but side wala info
+        - Jaise sidebar, related links, advertisement
+    -->
+    <aside>
+        <h3>Ye &lt;aside&gt; tag hai</h3>
+        <p>Sidebar jaisa content - related links, ads, extra info</p>
+    </aside>
+
+    <!-- 
+        <footer> : Page ya section ka bottom part
+        - Copyright, contact info, social links usually yaha hote hain
+    -->
+    <footer>
+        <h3>Ye &lt;footer&gt; tag hai</h3>
+        <p>Page ka bottom part - copyright, contact info yaha hota hai</p>
+    </footer>
+
+    <!-- 
+        ===========================================
+        QUICK MEMORY TIP
+        ===========================================
+        Pura page is tarah structure ho sakta hai:
+
+        <header> -> Top part (logo, nav)
+        <nav>    -> Menu links
+        <main>
+            <section> -> Ek topic group
+                <article> -> Individual post/content
+            <section>
+        <aside>  -> Sidebar
+        <footer> -> Bottom part
+    -->
+
+</body>
+</html>

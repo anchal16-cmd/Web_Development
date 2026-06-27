@@ -3,14 +3,12 @@ body{
 font-family: Arial;
 margin:0;
 background:#0f172a;
-color:white;
+background:#eef2ff;
 }
 
-/* Navbar */
-
 nav{
-background:#111;
-color:white;
+background:#0f172a;
+color:#f8f9fa;
 padding:15px;
 display:flex;
 justify-content:space-between;
@@ -23,18 +21,19 @@ gap:20px;
 }
 
 nav a{
-color:white;
+color:#e9edf1;
 text-decoration:none;
+
 }
 
-/* Hero */
+
+
 .hero{
 text-align:center;
 padding:80px;
 background:linear-gradient(135deg,#010103,#4f46e5);
-color:white;
+color:rgb(243, 240, 240);
 }
-
 
 .hero button{
 padding:12px 20px;
@@ -45,37 +44,105 @@ color:white;
 cursor:pointer;
 }
 
-/* Section */
+
+
+/* SECTION */
 
 .section{
-padding:50px;
+padding:60px;
 text-align:center;
 }
 
+
+
+/* CARD GRID */
+
 .cards{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+margin-top:30px;
 }
+
+
+
+/* CARD */
 
 .card{
 background:white;
 padding:20px;
-width:200px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 
-footer{
 
-background:#02183b;
+/* DROPDOWN */
+
+details{
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+}
+
+details ul{
+margin-top:10px;
+text-align:left;
+}
+
+details li{
+list-style:none;
+margin:8px 0;
+}
+
+details a{
+text-decoration:none;
+color:#2563eb;
+}
+.chat-container{
+
+position:fixed;
+bottom:20px;
+right:20px;
+width:300px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+}
+
+#chat{
+
+height:200px;
+overflow-y:auto;
+margin-bottom:10px;
+
+}
+
+.chat-container input{
+
+width:70%;
+padding:8px;
+
+}
+
+.chat-container button{
+
+padding:8px 10px;
+background:#2563eb;
+color:white;
+border:none;
+
+}
+
+
+/* FOOTER */
+
+footer{
+background:#111827;
 color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
 }
-
-
-

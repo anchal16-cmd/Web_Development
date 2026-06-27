@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- 
+  TOPIC: Tables in HTML
+  File: 04-tables.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables Notes</title>
+    <style>
+        /* Ye styling sirf table ko visually clear dikhane ke liye hai */
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Tables</h1>
+
+    <!-- 
+        ===========================================
+        TABLE KE MAIN TAGS
+        ===========================================
+        - <table>  : Pura table is tag ke andar hota hai
+        - <tr>     : Table Row - ek horizontal row banata hai
+        - <th>     : Table Header - column ka heading (bold + center by default)
+        - <td>     : Table Data - normal cell jisme actual data hota hai
+        
+        YAAD RAKHNE KA TARIKA:
+        table > tr (row) > th ya td (cells)
+    -->
+
+    <h2>Basic Table</h2>
+    <table>
+        <!-- Pehli row - headers ke liye th use karte hain -->
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+
+        <!-- Baaki rows - data ke liye td use karte hain -->
+        <tr>
+            <td>Rahul</td>
+            <td>20</td>
+            <td>Ranchi</td>
+        </tr>
+        <tr>
+            <td>Priya</td>
+            <td>22</td>
+            <td>Delhi</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 
+        ===========================================
+        COLSPAN aur ROWSPAN
+        ===========================================
+        - colspan: ek cell ko HORIZONTALLY multiple columns me spread karta hai
+        - rowspan: ek cell ko VERTICALLY multiple rows me spread karta hai
+        - Bahut useful hota hai jab koi cell merge karna ho
+    -->
+
+    <h2>Colspan Example (cell ko columns me merge karna)</h2>
+    <table>
+        <tr>
+            <th colspan="2">Student Info (ye dono columns ko cover karega)</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Rahul</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <h2>Rowspan Example (cell ko rows me merge karna)</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td rowspan="2">Rahul (ye cell 2 rows tak phaila hua hai)</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 
+        ===========================================
+        SEMANTIC TABLE TAGS (Optional but good practice)
+        ===========================================
+        - <thead> : Table ka header section (top wala part)
+        - <tbody> : Table ka main body (actual data)
+        - <tfoot> : Table ka footer section (jaise total/summary)
+        - Inka use karna jaroori nahi hai, lekin bade tables me
+          structure clear rakhne ke liye best practice mana jata hai
+    -->
+
+    <h2>Table with thead, tbody, tfoot (Best Practice)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pen</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Notebook</td>
+                <td>40</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
